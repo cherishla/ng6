@@ -1,0 +1,13 @@
+.dashboard{
+  height:300px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height:calc(100vh - 125px);
+}
+
+.dashboard p{
+    font-size: 16px;
+    text-align: right;
+}

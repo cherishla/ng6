@@ -1,0 +1,158 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">結構型指令(Directive)</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>*ngIf</span>
+            </h4>
+            <ul>
+              <li>
+                <p> * 是語法糖</p>
+              </li>
+              <li>
+                <p>ngIf是模組語法</p>
+              </li>
+              <li>
+                <p>*ngIf="true | false" => if(xxx)</p>
+              </li>
+              <li>
+                <p> name="123"; if(name) === true</p>
+              </li>
+              <li>
+                <p> age=0; if(age) === false</p>
+              </li>
+              <li>
+                <p> persons=[]; if(persons) === true => if(persons.length > 0)=false</p>
+              </li>
+              <li>
+                <p>利用ng-template 可以做*ngIf="condition; then Ablock else Bblock"</p>
+              </li>
+            </ul>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <input type="number" [(ngModel)]="name">
+              <p *ngIf="name > 10">大於10</p>
+              <p *ngIf="name <= 10">太小囉</p>
+            </div>
+          </div>
+          <div>
+            <app-code [code]='ifCode' codeType='markup' title='sugar.component.html'></app-code>
+            <app-code [code]='ifTsCode' codeType='js' title='sugar.component.ts'></app-code>
+          </div>
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>ngForOf</span>
+            </h4>
+            <p>1) *ngFor="let item of data;" </p>
+            <p>2) 同一層不可以搭配*ngIf作使用</p>
+            <p>3) 提供五個變數</p>
+            <ul>
+              <li>
+                index:number, index
+              </li>
+              <li>
+                first:boolean, 是否為第一筆資料
+              </li>
+              <li>
+                last:boolean, 是否為最後一筆資料
+              </li>
+              <li>
+                even:boolean, 是否為奇數
+              </li>
+              <li>
+                even:boolean, 是否為奇數
+              </li>
+              <li>
+                odd:boolean, 是否為偶數
+              </li>
+            </ul>
+            <p>4)
+              <a href="https://angular.cn/guide/template-syntax#template-input-variables">trackBy</a>
+              <span>: 避免大量資料異動時，導致畫面效能降低</span>
+            </p>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <table id="datatable1" class="table-datatable table table-striped table-hover mv-lg">
+                <thead>
+                  <tr>
+                    <th>index</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>first</th>
+                    <th>last</th>
+                    <th>even</th>
+                    <th>odd</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="gradeX" *ngFor="let item of personsData;let i= index; first as first; last as last; even as isEven; odd as isOdd;">
+                    <td>{{i+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>
+                      <span *ngIf="first">v</span>
+                    </td>
+                    <td>
+                      <span *ngIf="last">v</span>
+                    </td>
+                    <td>
+                      <span *ngIf="isEven">v</span>
+                    </td>
+                    <td>
+                      <span *ngIf="isOdd">v</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <app-code [code]='forTsCode' codeType='js' title='sugar.component.ts'></app-code>
+            <app-code [code]='forCode' codeType='markup' title='sugar.component.html' dataLine="15"></app-code>
+          </div>
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>ngSwitch</span>
+            </h4>
+            <div class="demo">
+              <h4>
+                <span>Demo</span>
+              </h4>
+              <div class="view">
+                <input type="radio" name="sex" [(ngModel)]="sex" value="M">男
+                <input type="radio" name="sex" [(ngModel)]="sex" value="F">女
+                <input type="radio" name="sex" [(ngModel)]="sex" value="UFO">Other
+                <span [ngSwitch]="sex">
+                  <p *ngSwitchCase="'M'"> Hi boy~</p>
+                  <p *ngSwitchCase="'F'">Hello girl~</p>
+                  <p *ngSwitchDefault>OMG!</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <app-code [code]='switchTSCode' codeType='js' title='sugar.component.ts'></app-code>
+          <app-code [code]='switchCode' codeType='markup' title='sugar.component.html' dataLine="5-8"></app-code>
+        </li>
+      </ol>
+
+    </div>

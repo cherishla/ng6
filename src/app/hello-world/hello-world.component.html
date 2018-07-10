@@ -1,0 +1,160 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">Displaying Data</h2>
+    </div>
+  </div>
+  <app-code [code]='tsCode' codeType='js' title='hello-world.component.ts'></app-code>
+
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>interpolation(內嵌)</span>
+            </h4>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <p>{{title}}</p>
+            </div>
+          </div>
+          <app-code [code]='interCode' codeType='markup' title='hello-world.component.html'></app-code>
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4>property binding</h4>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <input type="text" [value]="title" />
+            </div>
+          </div>
+          <app-code [code]='propCode' codeType='markup' title='hello-world.component.html'></app-code>
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>Event binding</span>
+            </h4>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <button class="btn btn-primary" (click)="showTitle($event)">點我</button>
+            </div>
+          </div>
+
+          <app-code [code]='eventCode' codeType='markup' title='hello-world.component.html'></app-code>
+          <img src="assets/img/evnet.png" />
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4>
+              <span>two way binding(雙向綁定)</span>
+            </h4>
+          </div>
+          <div class="demo">
+            <h4>
+              <span>Demo</span>
+            </h4>
+            <div class="view">
+              <input type="text" [(ngModel)]="title2" />
+              <span>{{title2}}</span>
+            </div>
+          </div>
+
+          <app-code [code]='twoWayBindingModule' codeType='js' title='app.module.ts'></app-code>
+          <app-code [code]='twoWayBindingCode' codeType='markup' title='hello-world.component.html'></app-code>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+
+
+</div>
+<br />
+
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">一點點進階</h2>
+    </div>
+    
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>
+          <div class="hightlight">
+            <h4><span>pipe</span></h4>
+          </div>
+          <div>
+            <p>* 重複轉換，EX: 日期、轉換大小寫、多國語言(i18n)...等等</p>
+            <p>* 目的: 讓你把pipe當CSS一樣方便使用</p>
+            <p>* 自行定義pipe, EX: 性別 M/F=>男/女。參考:
+              <a href="https://angular.cn/guide/pipes#custom-pipes">自定義pipe</a>
+            </p>
+            <p>* 更多
+              <a href="https://angular.cn/api?type=pipe">pipe</a>
+            </p>
+            <div class="demo">
+              <h4><span>Demo</span></h4>
+              <div class="view">
+                  <p>{{ jsonToString | json }}</p>
+                  <p>No Pipe: {{ today }}</p>
+                  <p>Pipe:　{{ today | date:'fullDate' | uppercase}}</p>
+              </div>
+            </div>
+            <app-code [code]='pipeCode' codeType='markup' title='hello-world.component.html'></app-code>
+            <app-code [code]='pipeTsCode' codeType='js' title='hello-world.component.ts'></app-code>
+          </div>
+        </li>
+        <li>
+          <div class="hightlight">
+            <h4><span>template binding(樣板)</span></h4>
+          </div>
+          <div>
+            <p>* 可以直接在html拿到dom</p>
+            <p>* 取代 id attribute</p>
+          </div>
+          <div class="demo">
+            <h4><span>Demo</span></h4>
+            <div class="view">
+                <input type="text" #tempTitle [value]="title" />{{tempTitle.value}}
+            </div>
+          </div>
+          <app-code [code]='templateCode' codeType='markup' title='hello-world.component.html'></app-code>
+          <app-code [code]='templateRefCode' codeType='markup' title='hello-world.component.html'></app-code>
+          <div class="hightlight">
+            <h4>
+              <p>* 取代document.getElementbyId，利用<span>@viewchild</span></p>
+          </h4>
+          </div>
+          <div class="demo">
+            <h4><span>Demo</span></h4>
+            <div class="view">
+                <input type="text" #tempTitle1 />{{tempTitle1.value}}
+                <button class="btn btn-primary" (click)="tempChange(tempTitle1)">Event 傳遞</button>
+                <button class="btn btn-primary" (click)="tempChange2()">viewchild 傳遞</button>
+            </div>
+          </div>
+          
+          <app-code [code]='templateCode1' codeType='markup' title='hello-world.component.html'></app-code>
+          <app-code [code]='templateTSCode1' codeType='js' title='hello-world.component.html' dataLine="2,4,10"></app-code>
+
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

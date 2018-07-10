@@ -1,0 +1,45 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">Output、Input</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ul>
+        <li>Ouput: 發射(EventEmit)參數給父元件</li>
+        <li>Input: 父元件注入參數給子元件</li>
+      </ul>
+      <img src="assets/img/output1.png" />
+      <img src="assets/img/output2.png" />
+    </div>
+  </div>
+</div>
+<br />
+<div class="content-heading bg-white">
+  <div class="row content">
+    <div class="col-sm-12 demo">
+        <h4>
+          <span>Demo</span>
+        </h4>
+        <div class="view">
+          <p>設定子元件
+            <input type="text" (keyup)="changeName(inputName.value)" #inputName/>
+          </p>
+          子元件給我的:{{name}}
+          <app-person (getName)="getName($event)" [name]="name"></app-person>
+        </div>
+    </div>
+  </div>
+
+</div>
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-code [code]='masterCode' codeType='markup' title='master-param.component.html' dataLine="8"></app-code>
+      <app-code [code]='masterTSCode' codeType='js' title='master-param.component.ts'></app-code>
+      <app-code [code]='personCode' codeType='markup' title='master-param.component.html'></app-code>
+      <app-code [code]='personTSCode' codeType='js' title='master-param.component.ts' dataLine="2,4,5,8"></app-code>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2 class="m0 text-thin">屬性型指令(Directive)</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <ol>
+      <li>
+        <p>
+          獨立的css: 每個頁面的css是獨立的，避免被複寫
+        </p>
+        <app-code codeType="css" title="code.component.css" [code]="codeStyle"></app-code>
+        <app-code codeType="css" title="app.component.css" [code]="appStyle"></app-code>
+        <div>
+          <img src="assets/img/images/css.png" />
+        </div>
+      </li>
+      <li class="demo">
+        <p>ngClass</p>
+        <p>動態載入css class , {{'{cssClass : true | false}'}}</p>
+        <h4>
+            <span>Demo</span>
+          </h4>
+        <div class="view">
+          <p class="title" [ngClass]="{'red': isRed, 'blue':!isRed}">Title</p>
+          <button (click)="changeColor()" class="btn btn-primary">變顏色</button>
+        </div>
+        <app-code codeType="css" title="web-style.component.css" [code]="classCode"></app-code>
+        <app-code codeType="markup" title="web-style.component.html" [code]="classHtmlCode" dataLine="3"></app-code>
+        <app-code codeType="js" title="web-style.component.ts" [code]="classTsCode"></app-code>
+      </li>
+      <li class="demo">
+        <p>ngStyle</p>
+        <p>動態載入style , {{'{"style" : string}'}}</p>
+        <h4>
+          <span>Demo</span>
+        </h4>
+        <div class="view">
+            <p [ngStyle]="{'font-size': fontSize }">large size</p>
+        </div>
+        <app-code codeType="js" title="web-style.component.ts" [code]="styleTsCode"></app-code>
+        <app-code codeType="markup" title="web-style.component.html" [code]="styleHtmlCode" dataLine="2"></app-code>
+      </li>
+      <li class="demo">
+        <p>Other</p>
+        <h4>
+            <span>Demo</span>
+        </h4>
+        <div class="view">
+          <p [style.font-size.px]="'12'" [style.background-color]="'yellow'">small font</p>
+        </div>
+        <app-code codeType="markup" title="web-style.component.html" [code]="attrCode"></app-code>
+
+      </li>
+    </ol>
+  </div>
+</div>

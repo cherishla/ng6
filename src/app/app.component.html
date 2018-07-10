@@ -1,0 +1,17 @@
+<!-- top navbar-->
+<app-head [title]="title"></app-head>
+<app-sidebar (getTitle)="getTitle($event)"></app-sidebar>
+<div class="sidebar-layout-obfuscator"></div>
+<!-- Main section-->
+<main class="main-container">
+  <!-- Page content-->
+  <section>
+
+    <router-outlet></router-outlet>
+
+  </section>
+  <!-- Page footer-->
+  <footer>
+    <span>2017 - Centric app.</span>
+  </footer>
+</main>

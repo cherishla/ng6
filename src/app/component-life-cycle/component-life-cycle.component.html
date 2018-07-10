@@ -1,0 +1,46 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">生命週期</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <br>
+      <p>
+        <a href="https://angular.cn/guide/lifecycle-hooks">官網參考</a>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="../../assets/img/lifecycle.png" />
+      <table class="table-datatable table table-striped table-hover mv-lg">
+        <thead>
+          <tr>
+            <th>Hook</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="gradeX">
+            <td>ngOnChanges()</td>
+            <td>第一次載入畫面會在ngOnInit之前，當綁定屬性時就會觸發</td>
+          </tr>
+          <tr class="gradeX">
+            <td>ngOnInit()</td>
+            <td>初始化component，只會呼叫一次</td>
+          </tr>
+          <tr class="gradeX">
+            <td>ngDoCheck()</td>
+            <td>檢測變更時就會觸發</td>
+          </tr>
+          <tr>
+            <td>ngOnDestroy()</td>
+            <td>當component移除之前會呼叫</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

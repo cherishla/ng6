@@ -1,0 +1,207 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">與API互動</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>
+          <a href="https://ithelp.ithome.com.tw/articles/10186104">RxJS</a>
+        </li>
+        <li>
+          <a href="https://rxjs-cn.github.io/learn-rxjs-operators/">RxJS 操作符</a>
+        </li>
+        <li>
+          <a href="http://rxmarbles.com">RxJS 操作符圖解</a>
+        </li>
+        <li>
+          <a href="https://angular.cn/guide/dependency-injection-pattern">依賴注入(Dependency injection,DI)</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<br />
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">RxJS 非同步</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>由微軟開發的 LinQ 擴展出來的開源專案</li>
+        <li>DOM Events、XMLHttpRequest、WebSockets、Timer... 可以統一撰寫方式</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12 hightlight">
+      <h4 class="">
+        <span>Observable 原理</span>
+      </h4>
+      <div>
+        <ol>
+          <li>Observable: 氣象台</li>
+          <li>Observer : 觀察員，他們的共用指令:
+            <ul class="margin-top-0">
+              <li>next: 拿到資料要傳遞給氣象台</li>
+              <li>error: 拿不到資料，要跟氣象台回報錯誤</li>
+              <li>complete: 當整個觀察工作結束，就要跟氣象台說我拿完囉</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <app-code [code]='weatherServiceCode' codeType='js' title='service.component.ts' dataLine='2,8,11,14-22'></app-code>
+
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12 hightlight">
+      <h4>
+        <span>訂閱資料</span>
+      </h4>
+      <ul>
+        <li>要訂閱才會執行</li>
+        <li>Observable.subscribe : 使用者訂閱這個氣象台，拿取資訊</li>
+        <li>
+          <p>Observable.subscribe.unsubscribe() : 取消訂閱，通常在ngOnDestroy時執行
+            <a href="https://brianflove.com/2016/12/11/anguar-2-unsubscribe-observables/">unsubscribe</a>
+          </p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12 demo">
+      <h4>
+        <span>Demo</span>
+      </h4>
+      <div class="view">
+        <button class="btn btn-primary" (click)="getWeather()">取得氣候</button>
+        <br />
+        <p>{{weatherStation$ | async }}</p>
+      </div>
+      <app-code [code]='weatherTsCode' codeType='js' title='service.component.ts' dataLine='6-12'></app-code>
+      <app-code [code]='weatherCode' codeType='markup' title='service.component.html' dataLine="3"></app-code>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12 hightlight">
+      <h4>
+        <span>介紹一點點操作符</span>
+      </h4>
+    </div>
+    <div class="col-sm-12">
+      <ol>
+        <li class="text-bold">
+          利用pipe進行擴充，別忘了要匯入rxjs operators
+        </li>
+        <li class="demo">
+          <p>map: 資料重組</p>
+          <h4>
+            <span>Demo</span>
+          </h4>
+          <div class="view">
+            <button class="btn btn-primary" (click)="getWeatherWithMap()">取得氣候(map)</button>
+          </div>
+          <app-code [code]='weatherMapTsCode' codeType='js' title='service.component.ts' dataLine='2,8-9'></app-code>
+        </li>
+        <li class="demo">
+          <p>tap : 紀錄每筆資料log</p>
+          <h4>
+            <span>Demo</span>
+          </h4>
+          <div class="view">
+            <button class="btn btn-primary" (click)="getWeatherWithTap()">取得氣候(tap)</button>
+          </div>
+          <app-code [code]='weatherTapTsCode' codeType='js' title='service.component.ts' dataLine='6'></app-code>
+        </li>
+        <li class="demo">
+          <p>
+            catchError: 當server 拋出錯誤進行處理 of(...values, scheduler: Scheduler): Observable: 按順序輸出資料
+          </p>
+          <h4>
+            <span>Demo</span>
+          </h4>
+          <div class="view">
+            <button class="btn btn-primary" (click)="getWeatherWithCatchError()">取得氣候(error)</button>
+          </div>
+          <app-code [code]='weatherErrTsCode' codeType='js' title='service.component.ts' dataLine='6-7'></app-code>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<br />
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">Services</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 content">
+      <ol>
+        <li>
+          ng g service Person
+        </li>
+        <li>
+          app.module.ts import HttpClientModule
+        </li>
+        <li>注入PersonService</li>
+        <li>內存API
+          <a href="https://angular.cn/tutorial/toh-pt6">
+            HttpClientInMemoryWebApiModule</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <app-code [code]='initServiceCode' codeType='js' title='app.component.ts' dataLine='2,5'></app-code>
+  <div class="row content">
+    <div class="col-sm-12 hightlight">
+      <h4>
+        <span>
+          service 注意事項
+        </span>
+      </h4>
+      <ol>
+        <li>@Injectable: 裝飾器，依賴注入的參與者</li>
+        <li>要記得注入HttpClient: Get、Post、Put、Delete，都會回傳Observable</li>
+      </ol>
+    </div>
+    <div class="row content">
+      <div class="col-sm-12 demo">
+        <h4>
+          <span>Demo</span>
+        </h4>
+        <div class="view">
+          <button class="btn btn-primary" (click)="getPersons()">取得所有人員</button>
+          <button class="btn btn-primary" (click)="addPerson()">新增人員</button>
+          <button class="btn btn-primary" (click)="deletePerson()">刪除人員</button>
+          <button class="btn btn-primary" (click)="updatePerson()">更新人員</button>
+          <p>
+            <span *ngIf="personList.length > 0">{{personList| json}}</span>
+          </p>
+          <div>
+            <p>
+              <label>id</label> <br />
+              <input type="number" [(ngModel)]="person.id" readOnly>
+            </p>
+            <p>
+              <label>name</label> <br />
+              <input type="text" [(ngModel)]="person.name">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code [code]='serviceCode' codeType='js' title='person.service.ts' dataLine='3, 5-7, 9-11, 18'></app-code>
+    <app-code [code]='serviceTSCode' codeType='js' title='service.component.ts' dataLine='6'></app-code>
+    <app-code [code]='serviceHtmlCode' codeType='markup' title='service.component.html'></app-code>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<aside class="sidebar-container">
+  <div class="sidebar-header">
+    <div class="pull-right pt-lg text-muted hidden">
+      <em class="ion-close-round"></em>
+    </div>
+    <a href="#" class="sidebar-header-logo">
+      <img src="assets/img/ng.png" alt="Logo" style="width:200px">
+    </a>
+  </div>
+  <div class="sidebar-content">
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li (click)="gotoPage('What is AngularJS')">
+          <a routerLink="/introduction" class="ripple">
+            <span class="nav-icon">
+              <i class="far fa-question-circle"></i>
+            </span>
+            <span>What is AngularJS</span>
+          </a>
+        </li>
+
+        <li (click)="gotoPage('Create project')">
+          <a routerLink="/create" class="ripple">
+            <span class="pull-right nav-label"></span>
+            <span class="nav-icon">
+              <i class="far fa-plus-square"></i>
+            </span>
+            <span>Create project</span>
+          </a>
+        </li>
+        <li (click)="gotoPage('Displaying Data')">
+          <a routerLink="/basic" class="ripple">
+            <span class="pull-right nav-label"></span>
+            <span class="nav-icon">
+              <i class="fab fa-first-order"></i>
+            </span>
+            <span>Displaying Data</span>
+          </a>
+        </li>
+        <li (click)="gotoPage('Syntactic sugar')">
+          <a routerLink="/sugar" class="ripple">
+            <span class="pull-right nav-label"></span>
+            <span class="nav-icon">
+              <i class="fab fa-reddit-alien"></i>
+            </span>
+            <span>Syntactic sugar</span>
+          </a>
+        </li>
+        <li (click)="gotoPage('Master/Detail Component')">
+          <a routerLink="/masterParam" class="ripple">
+            <span class="pull-right nav-label"></span>
+            <span class="nav-icon">
+              <i class="far fa-object-group"></i>
+            </span>
+            <span>Master/Detail Component</span>
+          </a>
+        </li>
+        <li (click)="gotoPage('Component Lifecycle')">
+          <a routerLink="/lifecycle" class="ripple">
+            <span class="pull-right nav-label"></span>
+            <span class="nav-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </span>
+            <span>Component lifecycle</span>
+          </a>
+        </li>
+        <li>
+          <li (click)="gotoPage('Style')">
+            <a routerLink="/style" class="ripple">
+              <span class="pull-right nav-label"></span>
+              <span class="nav-icon">
+                <i class="far fa-image"></i>
+              </span>
+              <span>Style</span>
+            </a>
+          </li>
+          <li (click)="gotoPage('Service')">
+            <a routerLink="/service" class="ripple">
+              <span class="pull-right nav-label"></span>
+              <span class="nav-icon">
+                <i class="fas fa-globe-asia "></i>
+              </span>
+              <span>Service</span>
+            </a>
+          </li>
+          <li (click)="gotoPage('Route')">
+            <a routerLink="/route" class="ripple">
+              <span class="pull-right nav-label"></span>
+              <span class="nav-icon">
+                <i class="fas fa-link"></i>
+              </span>
+              <span>Route</span>
+            </a>
+          </li>
+          <li>
+            <li (click)="gotoPage('Form')">
+              <a routerLink="/form" class="ripple">
+                <span class="pull-right nav-label"></span>
+                <span class="nav-icon">
+                  <i class="far fa-file-alt"></i>
+                </span>
+                <span>Form</span>
+              </a>
+            </li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

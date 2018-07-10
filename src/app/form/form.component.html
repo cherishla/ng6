@@ -1,0 +1,75 @@
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">ngForm</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>
+          <a href="https://angliar.cn/guide/forms">官網參考</a>
+        </li>
+        <li class="text-bold ">*模組驅動表單</li>
+        <li>響應式表單(FormBuilder)</li>
+        <li>動態表單: 問卷</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<br />
+<div class="content-heading bg-white">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="m0 text-bold">模組驅動表單</h2>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12">
+      <ol>
+        <li>ngForm: angliarjs 遇到form tag 時，自動產生，可以取到所有form的資訊</li>
+        <li>ngSubmit: 當按鈕type=submit時，會觸發該事件</li>
+        <li>name="" 必要</li>
+        <li>#name="ngModel" 取得該欄位資訊，ngModel為固定值</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-sm-12 demo">
+      <h4>
+        <span>Demo</span>
+      </h4>
+      <div class="view">
+        <form #personForm="ngForm" (ngSubmit)="onSubmit(personForm)">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" minlength="4" maxlength="10" required [(ngModel)]="person.name" name="name" #name="ngModel">
+          </div>
+          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name is required</div>
+          <div *ngIf="name.errors?.minlength && name.touched" class="alert alert-danger">
+            Minimum of 4 characters
+          </div>
+          <button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid">Submit</button>
+        </form>
+
+        <table class="table-datatable table table-striped table-hover mv-lg">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="gradeX" *ngFor="let item of personsList">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <app-code [code]='formCode' codeType='markup' title='form.component.html' dataLine='2,5-14'></app-code>
+      <app-code [code]='formTSCode' codeType='js' title='form.component.ts'></app-code>
+    </div>
+  </div>
+</div>
