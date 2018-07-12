@@ -354,7 +354,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <h2 class=\"m0 text-bold\">AngularJS Creare Project</h2>\n    </div>\n  </div>\n  <div class=\"row content\">\n    <div class=\"col-sm-12\">\n      <ol>\n        <li>\n            <p>安裝angularJS(需要npm 8.9以上的版本)</p>\n            <app-code code=\"npm install -g @angular/cli\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>建立專案</p>\n          <app-code code=\"ng new 專案名稱\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>建置專案</p>\n          <app-code [code]=\"createProjectCode\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>執行angularJS</p>\n          \n          <app-code [code]=\"serveCode\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>angularJS 有的沒的檔案建立</p>\n          <app-code [code]=\"createFileCode\" codeType='js'></app-code>\n        </li>\n      </ol>\n    </div>\n  <div class=\"content-heading bg-white\">\n      <div class=\"row\">\n        <div class=\"col-sm-9\">\n          <h4 class=\"m0 text-thin\">架構&命名規則:</h4>\n        </div>\n        <div class=\"col-sm-3 text-right hidden-xs\"></div>\n      </div>\n      <div class=\"row content\">\n        <div class=\"col-sm-9\">\n          <ul>\n            <li>\n              <img src=\"assets/img/overview2.png\" />\n              <img src=\"assets/img/overview2.png\" />\n            </li>\n            <li>\n                <p>命名規則:</p>\n                <ol>\n                  <li>第一個單字一律小寫, ex: isDisplay</li>\n                  <li>function名稱盡量動詞在前, ex: goBack()</li>\n                  <li>css命名一律小寫: dark-bg</li>\n                </ol>\n            </li>\n           \n          </ul>\n        </div>\n        <div class=\"col-sm-3 text-right hidden-xs\"></div>\n      </div>\n    </div>\n\n    <div class=\"content-heading bg-white\">\n        <div class=\"row\">\n          <div class=\"col-sm-9\">\n            <h4 class=\"m0 text-thin\">Reference:</h4>\n          </div>\n          <div class=\"col-sm-3 text-right hidden-xs\"></div>\n        </div>\n        <div class=\"row content\">\n          <div class=\"col-sm-9\">\n            <ul>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/guide/quickstart\">QuickStart</a>\n              </li>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/tree/master/docs/documentation\">CLI Documentation</a>\n              </li>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/johnpapa/lite-server\">lite-server</a>\n              </li>\n            </ul>\n          </div>\n          <div class=\"col-sm-3 text-right hidden-xs\"></div>\n        </div>\n      </div>\n"
+module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\">\n    <div class=\"col-sm-12\">\n      <h2 class=\"m0 text-bold\">AngularJS Creare Project</h2>\n    </div>\n  </div>\n  <div class=\"row content\">\n    <div class=\"col-sm-12\">\n      <ol>\n        <li>\n            <p>安裝angularJS(需要npm 8.9以上的版本)</p>\n            <app-code code=\"npm install -g @angular/cli\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>建立專案</p>\n          <app-code code=\"ng new 專案名稱\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>建置專案</p>\n          <app-code [code]=\"createProjectCode\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>執行angularJS</p>\n          \n          <app-code [code]=\"serveCode\" codeType='js'></app-code>\n        </li>\n        <li>\n          <p>angularJS 有的沒的檔案建立</p>\n          <app-code [code]=\"createFileCode\" codeType='js'></app-code>\n        </li>\n      </ol>\n    </div>\n  <div class=\"content-heading bg-white\">\n      <div class=\"row\">\n        <div class=\"col-sm-9\">\n          <h4 class=\"m0 text-thin\">架構&命名規則:</h4>\n        </div>\n        <div class=\"col-sm-3 text-right hidden-xs\"></div>\n      </div>\n      <div class=\"row content\">\n        <div class=\"col-sm-9\">\n          <ul>\n            <li class=\"hightlight\">\n              <h4><span>架構</span></h4>\n              <img src=\"../../assets/img/component-tree.png\" style=\"padding-bottom:25px\" />\n              <br />\n              <img src=\"assets/img/overview2.png\" />\n            </li>\n            <li>\n                <p>命名規則:</p>\n                <ol>\n                  <li>第一個單字一律小寫, ex: isDisplay</li>\n                  <li>function名稱盡量動詞在前, ex: goBack()</li>\n                  <li>css命名一律小寫: dark-bg</li>\n                </ol>\n            </li>\n           \n          </ul>\n        </div>\n        <div class=\"col-sm-3 text-right hidden-xs\"></div>\n      </div>\n    </div>\n\n    <div class=\"content-heading bg-white\">\n        <div class=\"row\">\n          <div class=\"col-sm-9\">\n            <h4 class=\"m0 text-thin\">Reference:</h4>\n          </div>\n          <div class=\"col-sm-3 text-right hidden-xs\"></div>\n        </div>\n        <div class=\"row content\">\n          <div class=\"col-sm-9\">\n            <ul>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/guide/quickstart\">QuickStart</a>\n              </li>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/tree/master/docs/documentation\">CLI Documentation</a>\n              </li>\n              <li>\n                  <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/johnpapa/lite-server\">lite-server</a>\n              </li>\n            </ul>\n          </div>\n          <div class=\"col-sm-3 text-right hidden-xs\"></div>\n        </div>\n      </div>\n"
 
 /***/ }),
 
@@ -369,6 +369,7 @@ module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateProjectComponent", function() { return CreateProjectComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -378,11 +379,16 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var CreateProjectComponent = /** @class */ (function () {
-    function CreateProjectComponent() {
+    function CreateProjectComponent(document) {
+        this.document = document;
         this.createProjectCode = "  //\u958B\u767C\n  ng build\n\n  //\u7522\u54C1\n  ng build --prod\n  ";
-        this.serveCode = "  //\u9810\u8A2D\u7DB2\u5740: http://localhost:4200\n  ng serve\n  \n  //or\n  npm start\n\n  //\u5982\u679C\u8981\u958B\u555F\u5DF2\u5305\u597D\u7684\u7522\u54C1\u7248\u672C(\u9810\u8A2D\u958B\u555Findex.html) \n  npm install lite-server --save-dev\n  cd \u5C08\u6848\u540D\u7A31/dist\n  lite-server \n  ";
+        this.serveCode = "  //\u9810\u8A2D\u7DB2\u5740: http://localhost:4200\n  ng serve\n\n  //or\n  npm start\n\n  //\u5982\u679C\u8981\u958B\u555F\u5DF2\u5305\u597D\u7684\u7522\u54C1\u7248\u672C(\u9810\u8A2D\u958B\u555Findex.html) \n  npm install lite-server --save-dev\n  cd \u5C08\u6848\u540D\u7A31/dist\n  lite-server \n  ";
         this.createFileCode = "  //\u6A94\u6848\u985E\u578B(\u5E38\u7528): component\u3001module\u3001service\u3001class \n  //\u6A94\u6848\u985E\u578B(\u4E0D\u5E38\u7528): guard\u3001directive\u3001interface\u3001enum\u3001pipe\u3001application\u3001library\u3001universal \n  ng generate \u6A94\u6848\u985E\u578B \u6A94\u6848\u540D\u7A31\n  ng g \u6A94\u6848\u985E\u578B \u6A94\u6848\u540D\u7A31\n   ";
     }
     CreateProjectComponent.prototype.ngOnInit = function () {
@@ -390,13 +396,17 @@ var CreateProjectComponent = /** @class */ (function () {
     CreateProjectComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    CreateProjectComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     CreateProjectComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-create-project',
             template: __webpack_require__(/*! ./create-project.component.html */ "./src/app/create-project/create-project.component.html"),
             styles: [__webpack_require__(/*! ./create-project.component.css */ "./src/app/create-project/create-project.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        __metadata("design:paramtypes", [Document])
     ], CreateProjectComponent);
     return CreateProjectComponent;
 }());
@@ -503,6 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_persons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/persons */ "./src/models/persons.ts");
 /* harmony import */ var _person_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../person.service */ "./src/app/person.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -512,12 +523,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 
 var FormComponent = /** @class */ (function () {
-    function FormComponent(personService) {
+    function FormComponent(personService, document) {
         this.personService = personService;
+        this.document = document;
         //#region
         this.formCode = " <form #personForm=\"ngForm\" (ngSubmit)=\"onSubmit(personForm)\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" class=\"form-control\" minlength = \"4\" maxlength = \"10\" required \n        [(ngModel)]=\"person.name\" name=\"name\" #name=\"ngModel\" />\n  </div>\n  <div [hidden]=\"name.valid || name.pristine\" class=\"alert alert-danger\">\n    Name is required</div>\n    <div *ngIf=\"name.errors?.minlength && name.touched\" class=\"alert alert-danger\">\n        Minimum of 4 characters\n    </div>\n  <button type=\"submit\" class=\"btn btn-success\" \n    [disabled]=\"!personForm.form.valid\">Submit</button>\n</form>\n\n<table  class=\"table-datatable table table-striped table-hover mv-lg\">\n  <thead>\n    <tr>\n      <th>id</th>\n      <th>name</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"gradeX\" *ngFor=\"let item of personsList\">\n      <td>{{item.id}}</td>\n      <td>{{item.name}}</td>\n    </tr>\n  </tbody>\n</table>\n  ";
         this.formTSCode = "  import { Persons } from '../../models/persons';\n  import { PersonService } from '../person.service';\n\n  person: Persons = new Persons();\n  personsList : Array<Persons>=[];\n  constructor(private personService: PersonService) { }\n  ngOnInit() {\n    this.getPersons();\n  }\n  onSubmit(form){\n    this.personService.addPerson(this.person).subscribe(() => this.getPersons());\n  }\n\n  getPersons(){\n    this.personService.getPersons().subscribe(data => {\n      data.sort((a,b)=>{\n        if(a.id > b.id) return -1;\n        else return 1;\n      });\n      this.personsList = data;\n    });\n  }\n  ";
@@ -547,13 +563,17 @@ var FormComponent = /** @class */ (function () {
     FormComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    FormComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     FormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-form',
             template: __webpack_require__(/*! ./form.component.html */ "./src/app/form/form.component.html"),
             styles: [__webpack_require__(/*! ./form.component.css */ "./src/app/form/form.component.css")]
         }),
-        __metadata("design:paramtypes", [_person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"]])
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"])),
+        __metadata("design:paramtypes", [_person_service__WEBPACK_IMPORTED_MODULE_2__["PersonService"], Document])
     ], FormComponent);
     return FormComponent;
 }());
@@ -662,6 +682,7 @@ module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelloWorldComponent", function() { return HelloWorldComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -671,10 +692,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var HelloWorldComponent = /** @class */ (function () {
     //#endregion
-    function HelloWorldComponent() {
+    function HelloWorldComponent(document) {
+        this.document = document;
         //#region code sample
         this.tsCode = "  export class HelloWorldComponent implements OnInit {\n    constructor() { }\n    title = 'Hello World !';\n    title2 = 'Hello World2 !';\n  }\n  ";
         this.interCode = "<p>{{title}}</p>\n  ";
@@ -707,6 +733,9 @@ var HelloWorldComponent = /** @class */ (function () {
     HelloWorldComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    HelloWorldComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('tempTitle1'),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
@@ -717,7 +746,8 @@ var HelloWorldComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./hello-world.component.html */ "./src/app/hello-world/hello-world.component.html"),
             styles: [__webpack_require__(/*! ./hello-world.component.css */ "./src/app/hello-world/hello-world.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        __metadata("design:paramtypes", [Document])
     ], HelloWorldComponent);
     return HelloWorldComponent;
 }());
@@ -988,6 +1018,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_persons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/persons */ "./src/models/persons.ts");
 /* harmony import */ var _person_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../person.service */ "./src/app/person.service.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -997,14 +1028,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 
 
 
 var ServiceComponent = /** @class */ (function () {
-    function ServiceComponent(personService) {
+    function ServiceComponent(personService, document) {
         this.personService = personService;
+        this.document = document;
         //#region data
         this.weatherCode = "  <button (click)=\"getWeather()\">\u53D6\u5F97\u6C23\u5019</button>\n  {{weatherStation$ | async }}\n  ";
         this.weatherServiceCode = " import { Observable, Observer, of } from 'rxjs';\n  /**\n   * \u53D6\u5F97\u5929\u6C23\u8CC7\u6599\n   * @param needError \u662F\u5426\u8981\u62CB\u51FA\u932F\u8AA4\n   */\n getWeatherData(needError?: boolean):Observable<string>{\n   return Observable.create((observer: Observer<string>) => {\n     try {\n       // \u96F7\u9054\u56DE\u6CE2\n       observer.next('\u4ECA\u65E5\u4E0A\u5348\u5929\u6C23\u6674');\n\n       //\u5047\u8A2D\u4E0B\u5348\u53C8\u53D6\u8CC7\u6599\n       setTimeout(() => {\n         if(needError)\n           observer.error(\"Boooooooooom!\")\n         observer.next('\u4ECA\u65E5\u4E0B\u5348\u72C2\u98A8\u66B4\u96E8');\n         observer.complete();\n\n       }, 3000);\n     } catch (error) {\n       observer.error('\u96F7\u9054\u58DE\u4E86');\n     }\n   });\n }\n  ";
@@ -1103,13 +1139,17 @@ var ServiceComponent = /** @class */ (function () {
     ServiceComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    ServiceComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     ServiceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-service',
             template: __webpack_require__(/*! ./service.component.html */ "./src/app/service/service.component.html"),
             styles: [__webpack_require__(/*! ./service.component.css */ "./src/app/service/service.component.css")]
         }),
-        __metadata("design:paramtypes", [_person_service__WEBPACK_IMPORTED_MODULE_3__["PersonService"]])
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DOCUMENT"])),
+        __metadata("design:paramtypes", [_person_service__WEBPACK_IMPORTED_MODULE_3__["PersonService"], Document])
     ], ServiceComponent);
     return ServiceComponent;
 }());
@@ -1388,6 +1428,7 @@ module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SugarComponent", function() { return SugarComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1397,10 +1438,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var SugarComponent = /** @class */ (function () {
     //#endregion
-    function SugarComponent() {
+    function SugarComponent(document) {
+        this.document = document;
         //#region
         this.ifCode = "  <input type=\"number\" [(ngModel)]=\"age\">\n  <p *ngIf=\"age > 10\">\u5927\u65BC10</p>\n  <p *ngIf=\"age <= 10\">\u592A\u5C0F\u56C9</p>\n  \n  //*\u865F\u53D6\u4EE3\u4E86template\uFF0C\u6240\u4EE5\u662F\u8A9E\u6CD5\u7CD6\n  <p template=\"ngIf:name > 10\">\u5927\u65BC10</p>\n  ";
         this.ifTsCode = "  constructor() { }\n  age = 1;\n  ngOnInit() {\n  }\n  ";
@@ -1423,13 +1469,17 @@ var SugarComponent = /** @class */ (function () {
     SugarComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    SugarComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     SugarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-sugar',
             template: __webpack_require__(/*! ./sugar.component.html */ "./src/app/sugar/sugar.component.html"),
             styles: [__webpack_require__(/*! ./sugar.component.css */ "./src/app/sugar/sugar.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        __metadata("design:paramtypes", [Document])
     ], SugarComponent);
     return SugarComponent;
 }());
@@ -1471,6 +1521,7 @@ module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebStyleComponent", function() { return WebStyleComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1480,9 +1531,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var WebStyleComponent = /** @class */ (function () {
-    function WebStyleComponent() {
+    function WebStyleComponent(document) {
+        this.document = document;
         this.isRed = false;
         this.fontSize = '30px';
         this.appStyle = ".code{\n    color:red;\n  }\n  ";
@@ -1502,13 +1558,17 @@ var WebStyleComponent = /** @class */ (function () {
     WebStyleComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    WebStyleComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     WebStyleComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-web-style',
             template: __webpack_require__(/*! ./web-style.component.html */ "./src/app/web-style/web-style.component.html"),
             styles: [__webpack_require__(/*! ./web-style.component.css */ "./src/app/web-style/web-style.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        __metadata("design:paramtypes", [Document])
     ], WebStyleComponent);
     return WebStyleComponent;
 }());

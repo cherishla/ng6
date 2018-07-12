@@ -132,6 +132,7 @@ module.exports = "<div class=\"content-heading bg-white\">\n  <div class=\"row\"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MasterParamComponent", function() { return MasterParamComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -141,9 +142,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var MasterParamComponent = /** @class */ (function () {
-    function MasterParamComponent() {
+    function MasterParamComponent(document) {
+        this.document = document;
         this.masterCode = "  <p>\u8A2D\u5B9A\u5B50\u5143\u4EF6\n    <input type=\"text\" (keyup)=\"changeName(inputName.value)\" #inputName/>\n  </p>\n\n  \u5B50\u5143\u4EF6\u7D66\u6211\u7684:{{name}}\n\n  <app-person (getName)=\"getName($event)\" [name]=\"name\"></app-person>\n\n  ";
         this.masterTSCode = " name = 'abc';\n  ngOnInit() {\n  }\n  getName(data) {\n    this.name = data;\n  }\n  changeName(data) {\n    this.name = data;\n  }\n  ";
         this.personCode = "  <div style=\"border:1px solid red; padding:10px\">\n    <p>\u6211\u662F\u5B50\u5143\u4EF6</p>\n    <input type=\"text\" [value]=\"name\" (keyup)=\"nameChange(childInput.value)\" #childInput/>\n  </div>\n\n  ";
@@ -161,13 +167,17 @@ var MasterParamComponent = /** @class */ (function () {
     MasterParamComponent.prototype.ngAfterViewInit = function () {
         Prism.highlightAll();
     };
+    MasterParamComponent.prototype.ngOnDestroy = function () {
+        this.document.body.scrollTop = 0;
+    };
     MasterParamComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-master-param',
             template: __webpack_require__(/*! ./master-param.component.html */ "./src/app/master-detail/master-param/master-param.component.html"),
             styles: [__webpack_require__(/*! ./master-param.component.css */ "./src/app/master-detail/master-param/master-param.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DOCUMENT"])),
+        __metadata("design:paramtypes", [Document])
     ], MasterParamComponent);
     return MasterParamComponent;
 }());
